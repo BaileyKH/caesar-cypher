@@ -21,7 +21,7 @@ while True:
     message = input()
 
 # For every iteration of the loop (length of the message) it first checks if the letter is in the alphabet, if so it assigns the index to the letter in the alphabet of the letter in message to a variable (alpha_index), then assigns the letter in the alphabet moved (either forwards or backwards) 'key' indicies (4), then finally adding the letter to the encrypted_message variable. If the element at message[i] is not in the alphabet (such as spaces) it gets added to encrypted_message
-def cypher(direction):
+def cipher(direction):
     encrypted_message = ''
     for i in range(len(message)):
         if message[i] in alphabet:
@@ -35,9 +35,9 @@ def cypher(direction):
 
 # Depending on message_type, the appropriate function will run returning the message
 if message_type == 1:
-    print(f'Encrypted Message: {cypher(direction)}')
+    print(f'Encrypted Message: {cipher(direction)}')
 else:
-    print(f'Decrypted Message: {cypher(direction)}')
+    print(f'Decrypted Message: {cipher(direction)}')
 
 
 
